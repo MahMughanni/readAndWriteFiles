@@ -48,9 +48,7 @@ class FileManager {
     return text;
   }
 
-  writeImageFile() async {
-    var imageUrl =
-        'https://media.wired.com/photos/62d75d34ddaaa99a1df8e61d/master/pass/Phone-Camera-Webcam-Gear-GettyImages-1241495650.png';
+  writeImageFile({required String imageUrl}) async {
     Response response = await Client().get(Uri.parse(imageUrl));
     Uint8List bytes = response.bodyBytes;
     File file = await imageFile;
@@ -78,7 +76,7 @@ class FileManager {
     }
   }
 }
-//
+
 // void printWrapped(String text) {
 //   final pattern = RegExp('.{1,800}'); // 800 is the size of each chunk
 //   pattern.allMatches(text).forEach((match) => print(match.group(0)));

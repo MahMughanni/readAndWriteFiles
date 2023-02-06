@@ -50,7 +50,9 @@ class HomePage extends StatelessWidget {
               const SizedBox(height: 16),
               CheetahButton(
                 text: "Save Image File",
-                onPressed: () => context.read<FileController>().writeImage(),
+                onPressed: () => context.read<FileController>().writeImage(
+                    imageUrl:
+                        'https://media.wired.com/photos/62d75d34ddaaa99a1df8e61d/master/pass/Phone-Camera-Webcam-Gear-GettyImages-1241495650.png'),
               ),
               const SizedBox(height: 16),
               CheetahButton(

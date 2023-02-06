@@ -1,8 +1,6 @@
 import 'dart:typed_data';
-
 import 'package:files_test/file_manager.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:http/http.dart';
 
 class FileController extends ChangeNotifier {
   String _text = '';
@@ -27,8 +25,8 @@ class FileController extends ChangeNotifier {
     notifyListeners();
   }
 
-  writeImage() async {
-    _imageBytesList = await FileManager().writeImageFile();
+  writeImage({required String imageUrl}) async {
+    _imageBytesList = await FileManager().writeImageFile(imageUrl: imageUrl);
     notifyListeners();
   }
 

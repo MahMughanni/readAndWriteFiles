@@ -40,6 +40,8 @@ dependencies:
   provider: ^6.0.5
   http: ^0.13.5
   dio: ^4.0.6
+  image_gallery_saver: ^1.6.6
+  permission_handler: ^10.2.0
 
 dev_dependencies:
   flutter_test:
